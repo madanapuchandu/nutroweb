@@ -32,6 +32,7 @@
         }
         h1 {
             text-align: center;
+            font-size: 24px;
         }
         .login-container {
             max-width: 400px;
@@ -44,10 +45,12 @@
         .login-container h2 {
             text-align: center;
             margin-bottom: 20px;
+            font-size: 22px;
         }
         .login-container label {
             display: block;
             margin-bottom: 5px;
+            font-size: 16px;
         }
         .login-container input[type="text"],
         .login-container input[type="password"] {
@@ -56,6 +59,7 @@
             margin-bottom: 10px;
             border: 1px solid #ccc;
             border-radius: 4px;
+            font-size: 16px;
         }
         .login-container input[type="submit"] {
             width: 100%;
@@ -65,19 +69,20 @@
             border: none;
             border-radius: 4px;
             cursor: pointer;
+            font-size: 16px;
         }
         .login-container input[type="submit"]:hover {
             background-color: #555;
         }
-        .create-account {
+        .login-container .links {
             text-align: center;
-            margin-top: 20px;
+            margin-top: 10px;
         }
-        .create-account a {
-            color: #333;
+        .login-container .links a {
+            color: #007bff;
             text-decoration: none;
         }
-        .create-account a:hover {
+        .login-container .links a:hover {
             text-decoration: underline;
         }
         footer {
@@ -88,45 +93,49 @@
             position: fixed;
             width: 100%;
             bottom: 0;
+            font-size: 14px;
         }
         footer a {
             color: #f2f2f2;
             text-decoration: none;
         }
-
     </style>
 </head>
 <body>
+
     <div class="navbar">
-        <a href=index.html>Home</a>        
-        <a href=services.html>Services</a>
-        <a href=profile.html>Profile</a>
-        <a href=contact.html>Contact Us</a>
+        <a href="index.html">Home</a>
+        <a href="services.html">Services</a>
+        <a href="profile.html">Profile</a>
+        <a href="contact.html">Contact Us</a>       
         <a href="bmi.html">Calculate BMI</a>
-        <a href=login.html>Login</a>
+        <a href="login.html">Login</a>
     </div>
 
     <div class="container">
-        <h1>Login to NUTRO WEB</h1>
-        
+        <h1>Login</h1>
         <div class="login-container">
-            <h2>Login</h2>
+            <h2>Sign In to Your Account</h2>
             <form action="/login" method="post">
                 <label for="username">Username</label>
                 <input type="text" id="username" name="username" required>
-                
+
                 <label for="password">Password</label>
                 <input type="password" id="password" name="password" required>
-                
+
                 <input type="submit" value="Login">
             </form>
-            <div class="create-account">
-                <p>Not a member? <a href="#create-account">Create an account</a></p>
+
+            <div class="links">
+                <p>Don't have an account? <a href="/register">Register here</a></p>
+                <p><a href="/forgot-password">Forgot Password?</a></p>
             </div>
         </div>
     </div>
-<footer>
-        &copy; 2024 NUTRO WEB. All rights reserved. 
+
+    <footer>
+        &copy; 2024 NUTRO WEB. All rights reserved.
     </footer>
+
 </body>
 </html>
